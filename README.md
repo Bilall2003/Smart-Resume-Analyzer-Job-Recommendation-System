@@ -1,3 +1,4 @@
+# COMING SOON.....
 # Smart-Resume-Analyzer-Job-Recommendation-System
 The Smart Resume Analyzer &amp; Job Recommendation System is an interactive application that allows users to upload their resumes and receive personalized career insights.
 The system extracts key information such as skills, education, and experience from the resume and evaluates how well the candidate matches various job roles. Users can also select a desired job title, and the system provides recommendations on missing skills and predicts future confidence levels if those skills are acquired.

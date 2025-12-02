@@ -20,6 +20,12 @@ class Sidebar():
                 color: transparent;
                 
             }
+            
+            .buttons{
+                background:linear-gradient(to right, #2193b0, #6dd5ed);
+                width:70px,
+                color: white;
+            }
              </style>       
         """,unsafe_allow_html=True)
     
@@ -76,6 +82,70 @@ class Sidebar():
         st.sidebar.markdown("<h3 id ='small_smartAi'>Smart Resume AI</h3>",unsafe_allow_html=True)
         st.sidebar.divider()
         
+        st.markdown("""
+                <style>
+                div.stButton > button:first-child {
+                    background: linear-gradient(#2193b0, #6dd5ed);
+                    width: 200px;       
+                    height:60px;        
+                    cursor: pointer;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;   /* center horizontally */
+                    align-items: center;       /* center vertically */
+                    text-align: center;
+                    margin-left: 30px;
+                    margin-top:10px;
+                    color: white;
+                    white-space: nowrap;
+          
+                }
 
-obj=Sidebar()
+                div.stButton > button:first-child:hover {
+                    transform: scale(1.05);
+                    opacity: 0.9;
+                }
+                </style>
+            """, unsafe_allow_html=True)
+        
+
+class Pages(Sidebar):
+    
+    def all_pages(self):
+    
+        def home():
+            but_sel1 = st.sidebar.button("🏠HOME",key="button1")
+            if but_sel1:
+                st.info("Welcome to Home Page")
+        home()
+        
+        def analyzer():
+            but_sel2 = st.sidebar.button("🔍RESUME ANALYZER",key="button2")
+            if but_sel2:
+                st.info("Welcome to analyzer Page")
+        analyzer()
+        
+        def dashboard():
+            but_sel3 = st.sidebar.button("📊DASHBOARD",key="button3")
+            if but_sel3:
+                st.info("Welcome to dashboard Page")
+        dashboard()
+        
+        def feedback():
+            but_sel4 = st.sidebar.button("💬FEED BACK",key="button4")
+            if but_sel4:
+                st.info("Welcome to feed Page")
+        feedback()
+        
+        def about():
+            but_sel5 = st.sidebar.button("ℹ️ ABOUT",key="button5")
+            if but_sel5:
+                st.info("Welcome to about Page")
+        about()
+
+        st.sidebar.divider()
+        
+        
+obj=Pages()
 obj.side_bar()
+obj.all_pages()

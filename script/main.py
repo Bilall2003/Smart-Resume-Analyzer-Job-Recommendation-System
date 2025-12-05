@@ -34,7 +34,7 @@ class Sidebar():
         st.sidebar.markdown("""
         <style>
         @keyframes mergeBehindSync {
-            0%, 100% { transform: translateX(30px); z-index: 1; }
+            0%, 100% { transform: translateX(30px); z-index: 1; } /*z-index to put image backside*/
             50% { transform: translateX(100px); z-index: 0; } /* left moves right behind center */
         }
 
@@ -104,6 +104,7 @@ class Sidebar():
                 div.stButton > button:first-child:hover {
                     transform: scale(1.05);
                     opacity: 0.9;
+                    background:linear-gradient(to right, #2193b0);
                 }
                 </style>
             """, unsafe_allow_html=True)

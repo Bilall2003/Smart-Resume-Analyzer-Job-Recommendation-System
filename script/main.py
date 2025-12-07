@@ -7,18 +7,21 @@ import os
 from urllib.parse import quote_plus
 
             
-class Sidebar():
+class Sidebar:
     
     st.markdown("""
             <style>
-            #small_smartAi{
-                font-size:25px;
-                font-weight:bold;
+            .sidebar .small_smartAi,
+            .small_smartAi {
+                font-size: 45px ;
+                font-weight: bold !important;
+                margin-top: 70px !important;
+
                 background: linear-gradient(to right, #2193b0, #6dd5ed);
                 -webkit-background-clip: text;
-                margin-top:70px;
-                color: transparent;
-                
+                background-clip: text;
+
+                -webkit-text-fill-color: transparent;
             }
             
             .buttons{
@@ -79,7 +82,7 @@ class Sidebar():
 
 
 
-        st.sidebar.markdown("<h3 id ='small_smartAi'>Smart Resume AI</h3>",unsafe_allow_html=True)
+        st.sidebar.markdown("<h3 class ='small_smartAi'>Smart Resume AI</h3>",unsafe_allow_html=True)
         st.sidebar.divider()
         
         st.markdown("""
@@ -117,7 +120,7 @@ class Pages(Sidebar):
         def home():
             but_sel1 = st.sidebar.button("🏠HOME",key="button1")
             if but_sel1:
-                st.info("Welcome to Home Page")
+                st.markdown("<h1 class='small_smartAi'>Smart Resume AI</h1>",unsafe_allow_html=True)
         home()
         
         def analyzer():

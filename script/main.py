@@ -126,14 +126,16 @@ class Pages(Sidebar):
                     <style>
 
                     .green-box {
-                        background: linear-gradient(45deg, rgba(0, 180, 219, 0.7) 100%, rgba(0, 131, 176, 0.05) 100%);          
-                        padding: 20px;
+                        background: linear-gradient(45deg, rgba(0, 180, 219, 0.7) 100%, rgba(0, 131, 176, 0.05) 100%);    
+                        padding:20px;     
+                        width:2500px; 
                         border-radius: 12px;
                         color: white;
                         max-width: 800px;
                         margin-top: 15px;
                         display:flex;
                         justify-content:flex-start;
+                        text-align:center;
                         
                     }
                     
@@ -163,11 +165,13 @@ class Pages(Sidebar):
                         .sec-box {
                         background: linear-gradient(45deg, rgba(120, 180, 200, 0.3) 100%, rgba(0, 131, 176, 0.05) 100%);          
                             padding: 20px;
+                            width:2500px; 
                             border-radius: 12px;
                             color: white;
                             max-width: 800px;
                             margin-top: 70px;
                             position: relative;
+                            overflow:hidden;
                         }
 
                         /* Animation */
@@ -177,7 +181,7 @@ class Pages(Sidebar):
                         }
 
                         .secmoveright {
-                            width: 40px;
+                            width: 60px;
                             position: relative;
                             animation: Syncimg 2s infinite ease-in-out;
                         }
@@ -197,12 +201,12 @@ class Pages(Sidebar):
                             cursor: pointer;
                             transform: scale(1.02);
                             transition: 0.1s;
-                            color: grey;
+                            border:3px solid #6dd5ed
                         }
                         </style>
 
                         <div class="sec-box">
-                            <img class="secmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/main/script/assets/cv%20(1).png">
+                            <img class="secmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/refs/heads/main/script/assets/rb_image.png">
                             <h2>AI-Powered Analysis</h2>
                             <p>
                                 Get instant feedback on your resume with advanced AI analysis that identifies strengths and areas for improvement.
@@ -215,6 +219,7 @@ class Pages(Sidebar):
                     .thrd-box {
                        background: linear-gradient(45deg, rgba(120, 180, 200, 0.3) 100%, rgba(0, 131, 176, 0.05) 100%);           
                         padding: 20px;
+                        width:2500px;
                         border-radius: 12px;
                         color: white;
                         max-width: 800px;
@@ -230,6 +235,7 @@ class Pages(Sidebar):
                         width: 40px;
                         position: relative;
                         animation: Syncimg 2s infinite ease-in-out;
+                        overflow:hidden;
                     }
 
                     .thrd-box h2 {
@@ -247,7 +253,7 @@ class Pages(Sidebar):
                         cursor: pointer;
                         transform: scale(1.02);
                         transition: 0.1s;
-                        color:grey;
+                        border:3px solid #6dd5ed 
                     }
                     </style>
 
@@ -264,10 +270,12 @@ class Pages(Sidebar):
                     .forth-box {
                         background: linear-gradient(45deg, rgba(120, 180, 200, 0.3) 100%, rgba(0, 131, 176, 0.05) 100%);          
                         padding: 20px;
+                        width:2500px; 
                         border-radius: 12px;
                         color: white;
                         max-width: 800px;
                         margin-top: 35px;
+                        overflow: hidden
                     }
                     
                      /* Animation */
@@ -296,12 +304,13 @@ class Pages(Sidebar):
                         cursor: pointer;
                         transform: scale(1.02);
                         transition: 0.1s;
-                        color:grey;
+                        border:3px solid #6dd5ed  
                     }
+                    
                     
                     </style>
                     <div class="forth-box">
-                        <img class="forthmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/main/script/assets/cv%20(1).png">
+                        <img class="forthmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/refs/heads/main/script/assets/depositphotos_343120268-stock-illustration-chat-bot-icon-vector-isolated.jpg">
                         <h2>Career Insights</h2>
                         <p>
                             Access detailed analytics and personalized recommendations to enhance your career prospects.

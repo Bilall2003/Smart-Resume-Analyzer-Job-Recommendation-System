@@ -13,9 +13,10 @@ class Sidebar:
             <style>
             .sidebar .small_smartAi,
             .small_smartAi {
-                font-size: 45px ;
+                font-size: 70px ;
                 font-weight: bold !important;
                 margin-top: 70px !important;
+                text-align:left;
 
                 background: linear-gradient(to right, #2193b0, #6dd5ed);
                 -webkit-background-clip: text;
@@ -29,6 +30,7 @@ class Sidebar:
                 width:70px,
                 color: white;
             }
+            
              </style>       
         """,unsafe_allow_html=True)
     
@@ -82,7 +84,7 @@ class Sidebar:
 
 
 
-        st.sidebar.markdown("<h3 class ='small_smartAi'>Smart Resume AI</h3>",unsafe_allow_html=True)
+        st.sidebar.markdown("<h1 class ='small_smartAi'>Smart Resume AI</h1>",unsafe_allow_html=True)
         st.sidebar.divider()
         
         st.markdown("""
@@ -120,7 +122,195 @@ class Pages(Sidebar):
         def home():
             but_sel1 = st.sidebar.button("🏠HOME",key="button1")
             if but_sel1:
-                st.markdown("<h1 class='small_smartAi'>Smart Resume AI</h1>",unsafe_allow_html=True)
+                st.markdown("""
+                    <style>
+
+                    .green-box {
+                        background: linear-gradient(45deg, rgba(0, 180, 219, 0.7) 100%, rgba(0, 131, 176, 0.05) 100%);          
+                        padding: 20px;
+                        border-radius: 12px;
+                        color: white;
+                        max-width: 800px;
+                        margin-top: 15px;
+                        display:flex;
+                        justify-content:flex-start;
+                        
+                    }
+                    
+                    .green-box h2 {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+
+                    .green-box p {
+                        font-size: 1.2rem;
+                        line-height: 1.5;
+                    }
+                    </style>
+
+                    <div class="green-box">
+                        <h2>Smart Resume AI</h2>
+                        <p>
+                            Transform your career with AI-powered resume analysis and building.<br>
+                            Get personalized insights and create professional resumes that stand out.
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                st.markdown("""
+                        <style>
+                        .sec-box {
+                        background: linear-gradient(45deg, rgba(120, 180, 200, 0.3) 100%, rgba(0, 131, 176, 0.05) 100%);          
+                            padding: 20px;
+                            border-radius: 12px;
+                            color: white;
+                            max-width: 800px;
+                            margin-top: 70px;
+                            position: relative;
+                        }
+
+                        /* Animation */
+                        @keyframes Syncimg {
+                            0%, 100% { transform: translateX(50px); z-index: 1; }
+                            50% { transform: translateX(-50px); z-index: -1; }
+                        }
+
+                        .secmoveright {
+                            width: 40px;
+                            position: relative;
+                            animation: Syncimg 2s infinite ease-in-out;
+                        }
+
+                        .sec-box h2 {
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+
+                        .sec-box p {
+                            font-size: 1.2rem;
+                            line-height: 1.5;
+                        }
+
+                        .sec-box:hover {
+                            cursor: pointer;
+                            transform: scale(1.02);
+                            transition: 0.1s;
+                            color: grey;
+                        }
+                        </style>
+
+                        <div class="sec-box">
+                            <img class="secmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/main/script/assets/cv%20(1).png">
+                            <h2>AI-Powered Analysis</h2>
+                            <p>
+                                Get instant feedback on your resume with advanced AI analysis that identifies strengths and areas for improvement.
+                            </p>
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                st.markdown("""
+                    <style>
+                    .thrd-box {
+                       background: linear-gradient(45deg, rgba(120, 180, 200, 0.3) 100%, rgba(0, 131, 176, 0.05) 100%);           
+                        padding: 20px;
+                        border-radius: 12px;
+                        color: white;
+                        max-width: 800px;
+                        margin-top: 35px;
+                    }
+                     /* Animation */
+                    @keyframes Syncimg {
+                        0%, 100% { transform: translateX(50px); z-index: 1; }
+                        50% { transform: translateX(-50px); z-index: -1; }
+                    }
+
+                    .thrdmoveright {
+                        width: 40px;
+                        position: relative;
+                        animation: Syncimg 2s infinite ease-in-out;
+                    }
+
+                    .thrd-box h2 {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+
+                    .thrd-box p {
+                        font-size: 1.2rem;
+                        line-height: 1.5;
+                    }
+                    
+                    .thrd-box:hover {
+                        cursor: pointer;
+                        transform: scale(1.02);
+                        transition: 0.1s;
+                        color:grey;
+                    }
+                    </style>
+
+                    <div class="thrd-box">
+                        <img class="thrdmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/main/script/assets/cv%20(1).png">
+                        <h2>Dashboard Exploration</h2>
+                        <p>
+                             visual interfaces that aggregate key performance indicators and metrics from various data sources into a single, easy-to-digest format.
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
+                st.markdown("""
+                    <style>
+                    .forth-box {
+                        background: linear-gradient(45deg, rgba(120, 180, 200, 0.3) 100%, rgba(0, 131, 176, 0.05) 100%);          
+                        padding: 20px;
+                        border-radius: 12px;
+                        color: white;
+                        max-width: 800px;
+                        margin-top: 35px;
+                    }
+                    
+                     /* Animation */
+                    @keyframes Syncimg {
+                        0%, 100% { transform: translateX(50px); z-index: 1; }
+                        50% { transform: translateX(-50px); z-index: -1; }
+                    }
+
+                    .forthmoveright {
+                        width: 40px;
+                        position: relative;
+                        animation: Syncimg 2s infinite ease-in-out;
+                    }
+
+                    .forth-box h2 {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+
+                    .forth-box p {
+                        font-size: 1.2rem;
+                        line-height: 1.5;
+                    }
+                    .forth-box:hover {
+                        cursor: pointer;
+                        transform: scale(1.02);
+                        transition: 0.1s;
+                        color:grey;
+                    }
+                    
+                    </style>
+                    <div class="forth-box">
+                        <img class="forthmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/main/script/assets/cv%20(1).png">
+                        <h2>Career Insights</h2>
+                        <p>
+                            Access detailed analytics and personalized recommendations to enhance your career prospects.
+                        </p>
+                    </div>
+                    
+                    """, unsafe_allow_html=True)
+                
+
         home()
         
         def analyzer():

@@ -181,7 +181,7 @@ class Pages(Sidebar):
                         }
 
                         .secmoveright {
-                            width: 60px;
+                            width: 40px;
                             position: relative;
                             animation: Syncimg 2s infinite ease-in-out;
                         }
@@ -224,6 +224,7 @@ class Pages(Sidebar):
                         color: white;
                         max-width: 800px;
                         margin-top: 35px;
+                        overflow:hidden;
                     }
                      /* Animation */
                     @keyframes Syncimg {
@@ -232,7 +233,7 @@ class Pages(Sidebar):
                     }
 
                     .thrdmoveright {
-                        width: 40px;
+                        width: 70px;
                         position: relative;
                         animation: Syncimg 2s infinite ease-in-out;
                         overflow:hidden;
@@ -258,7 +259,7 @@ class Pages(Sidebar):
                     </style>
 
                     <div class="thrd-box">
-                        <img class="thrdmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/main/script/assets/cv%20(1).png">
+                        <img class="thrdmoveright" src="https://raw.githubusercontent.com/Bilall2003/Smart-Resume-Analyzer-Job-Recommendation-System/refs/heads/main/script/assets/rb_image%20(1).png">
                         <h2>Dashboard Exploration</h2>
                         <p>
                              visual interfaces that aggregate key performance indicators and metrics from various data sources into a single, easy-to-digest format.

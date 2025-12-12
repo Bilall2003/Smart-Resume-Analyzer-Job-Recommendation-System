@@ -11,7 +11,6 @@ class Sidebar:
     
     st.markdown("""
             <style>
-            .sidebar .small_smartAi,
             .small_smartAi {
                 font-size: 70px ;
                 font-weight: bold !important;
@@ -338,7 +337,68 @@ class Pages(Sidebar):
         def feedback():
             but_sel4 = st.sidebar.button("💬FEED BACK",key="button4")
             if but_sel4:
-                st.info("Welcome to feed Page")
+                try:
+                    st.markdown("""
+                    <style>
+
+                    .green-box {
+                        background: linear-gradient(45deg, rgba(0, 180, 219, 0.7) 100%, rgba(0, 131, 176, 0.05) 100%);    
+                        padding:20px;     
+                        width:2500px; 
+                        border-radius: 12px;
+                        color: white;
+                        max-width: 800px;
+                        margin-bottom: 50px;
+                        text-align:center;
+                        
+                    }
+                    
+                    .green-box h2 {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        background:linear-gradient(to right,green,blue,grey);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color:transparent;
+                    }
+                     .green-box h3 {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 0px;
+                        color:white;
+                        border: 10px solid white;
+                    }
+
+                    .green-box p {
+                        font-size: 1.2rem;
+                        line-height: 1.5;
+                    }
+                    </style>
+
+                    <div class="green-box">
+                         <h2>🔊Your FeedBack Matters!</h2>
+                        <p>
+                            Help us improve Smart Resume AI with your valuable feedback.<br>
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    tab1,tab2=st.tabs(["Share Feedback","Feedback Overview"])
+                    
+                    with tab1:
+                    
+                        st.markdown("""<div class="green-box">
+                            <h3>📝Share Your Feedback</h3>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with tab2:
+                        st.info("overview....")
+                    
+                    st.markdown("<h2 class ='small_smartAi'>Smart Resume AI</h2>",unsafe_allow_html=True)
+                    
+                except Exception as e:
+                    
+                    st.error("Something Went Wrong.........")
         feedback()
         
         def about():

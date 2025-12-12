@@ -335,70 +335,118 @@ class Pages(Sidebar):
         dashboard()
         
         def feedback():
-            but_sel4 = st.sidebar.button("💬FEED BACK",key="button4")
-            if but_sel4:
-                try:
-                    st.markdown("""
-                    <style>
+                if "show_feedback" not in st.session_state:
+                    st.session_state.show_feedback = False
 
-                    .green-box {
-                        background: linear-gradient(45deg, rgba(0, 180, 219, 0.7) 100%, rgba(0, 131, 176, 0.05) 100%);    
-                        padding:20px;     
-                        width:2500px; 
-                        border-radius: 12px;
-                        color: white;
-                        max-width: 800px;
-                        margin-bottom: 50px;
-                        text-align:center;
+                if st.sidebar.button("💬FEED BACK"):
+                    st.session_state.show_feedback = True
+
+                if st.session_state.show_feedback:
+                    try:
+                        st.markdown("""
+                        <style>
+
+                        .green-box {
+                            background: linear-gradient(45deg, rgba(0, 180, 219, 0.7) 100%, rgba(0, 131, 176, 0.05) 100%);    
+                            padding:20px;     
+                            width:2500px; 
+                            border-radius: 12px;
+                            color: white;
+                            max-width: 800px;
+                            margin-bottom: 50px;
+                            text-align:center;
+                            
+                        }
                         
-                    }
-                    
-                    .green-box h2 {
-                        font-size: 2.5rem;
-                        font-weight: bold;
-                        margin-bottom: 10px;
-                        background:linear-gradient(to right,green,blue,grey);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color:transparent;
-                    }
-                     .green-box h3 {
-                        font-size: 2.5rem;
-                        font-weight: bold;
-                        margin-bottom: 0px;
-                        color:white;
-                        border: 10px solid white;
-                    }
+                        .green-box h2 {
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            background:linear-gradient(to right,green,blue,grey);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color:transparent;
+                        }
+                        .green-box h3 {
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                            margin-bottom: 0px;
+                            color:white;
+                            border: 10px solid white;
+                        }
 
-                    .green-box p {
-                        font-size: 1.2rem;
-                        line-height: 1.5;
-                    }
-                    </style>
+                        .green-box p {
+                            font-size: 1.2rem;
+                            line-height: 1.5;
+                        }
+                        .feedtexts {
+                                color: blue;
+                                margin-bottom:100px;
+                        }
+                        </style>
 
-                    <div class="green-box">
-                         <h2>🔊Your FeedBack Matters!</h2>
-                        <p>
-                            Help us improve Smart Resume AI with your valuable feedback.<br>
-                        </p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                    
-                    tab1,tab2=st.tabs(["Share Feedback","Feedback Overview"])
-                    
-                    with tab1:
-                    
-                        st.markdown("""<div class="green-box">
-                            <h3>📝Share Your Feedback</h3>
+                        <div class="green-box">
+                            <h2>🔊Your FeedBack Matters!</h2>
+                            <p>
+                                Help us improve Smart Resume AI with your valuable feedback.<br>
+                            </p>
                         </div>
                         """, unsafe_allow_html=True)
-                    with tab2:
-                        st.info("overview....")
-                    
-                    st.markdown("<h2 class ='small_smartAi'>Smart Resume AI</h2>",unsafe_allow_html=True)
-                    
-                except Exception as e:
-                    
-                    st.error("Something Went Wrong.........")
+                        
+                        tab1,tab2=st.tabs(["Share Feedback","Feedback Overview"])
+                        
+                        with tab1:
+                        
+                            st.markdown("""<div class="green-box">
+                                <h3>📝Share Your Feedback</h3>
+                            </div>
+                            """, unsafe_allow_html=True)
+
+                            st.markdown("""
+                                        <h4 class="feedtexts">Overall Experience</h4>
+                            """, unsafe_allow_html=True)
+                            
+
+                        def star_rating(slider_value):
+                            st.markdown("""
+                                <style>
+                                .star-container {
+                                    font-size: 29px;
+                                    color: #ddd;
+                                }
+                                .star {
+                                    margin-right: 5px;
+                                    transition: 0.1s;
+                                }
+                                .star.gold {
+                                    color: gold;
+                                }
+                                </style>
+                            """, unsafe_allow_html=True)
+
+                            stars_html = "<div class='star-container'>"
+                            for i in range(1, 6):
+                                if i <= slider_value:
+                                    stars_html += "<span class='star gold'>&#9733;</span>"   # filled star
+                                else:
+                                    stars_html += "<span class='star'>&#9733;</span>"        # gray star
+                            stars_html += "</div>"
+
+                            st.markdown(stars_html, unsafe_allow_html=True)
+
+
+                        rating = st.slider("Rating", 1, 5, 3,label_visibility="collapsed")
+
+                        star_rating(rating)
+
+                        
+                            
+                        
+                        with tab2:
+                            st.info("overview....")
+                            
+                    except Exception as e:
+                        
+                        st.error("Something Went Wrong.........")
         feedback()
         
         def about():
